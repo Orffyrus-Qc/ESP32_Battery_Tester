@@ -1,5 +1,9 @@
 # ESP32 Non-Rechargeable Battery Tester
 
+> 🚧 **UNDER CONSTRUCTION · UNTESTED · PROTOTYPE**
+> This is experimental firmware — see the ⚠ **Work in progress** section below. Do
+> not treat this as ready-to-use or trusted measuring equipment.
+
 A short-load battery tester for **non‑rechargeable** (primary) cells. You pick a
 battery type on a 16x2 I2C LCD (or enter your own "Custom" cell), the ESP32 applies
 a **brief** controlled load, measures voltage & current, and feeds those readings
@@ -11,6 +15,22 @@ cycle** — draining them for more than a few seconds would waste the very life 
 trying to test.
 
 ---
+> ![UNTESTED · UNVERIFIED · NO FIELD DATA](assets/warnings/untested_banner.png)
+>
+> ## ⚠ Work in progress — this firmware has been **untested**
+>
+> This project is **not production-ready**. Nothing here has been validated on
+> real hardware. Treat all of the following cautiously:
+>
+> - **Never flashed to a real board or measured against an actual cell** — the
+>   sketch only compiles (`pio run` — SUCCESS).
+> - **Model weights are synthetic** — they fit a synthetic capacity model, **not**
+>   lab‑measured battery data.
+> - **Wiring, pinouts, and sensor scaling are unverified** and may be wrong.
+> - The AI "rating" is a **heuristic estimate**, never lab‑grade.
+>
+> **Do not trust this for actual measurements.** Repro on a bench (and read the
+> [Safety section](#safety) before relying on any output.
 
 ## What it does
 
